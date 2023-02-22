@@ -30,10 +30,14 @@
             }
         }
     </script>
+
+    <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
 
+    <!-- SWEETALERT 2 -->
+    
     <!-- Option 1: Include in HTML -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <title>Miguel Carrasco Dev</title>
@@ -222,28 +226,29 @@
             <div class="text-white text-center flex flex-col gap-4">
                 <div class="flex flex-col items-center text-white font-bold text-[2rem]">Contacto</div>
             </div>
-            <form class="flex flex-col gap-2 sm:w-[350px] md:w-[380px]" action="" method="post">
+            <form id="form" class="flex flex-col gap-2 sm:w-[350px] md:w-[380px]" action="https://formspree.io/f/mjvdwpll" method="post">
                 <div class="">
                     <label for="" class="text-white">Nombres y apellidos</label>
                     <input class="w-full rounded-lg p-2 outline-none text-primary"
-                        placeholder="Ingrese nombres y apellidos" type="text">
+                        placeholder="Ingrese nombres y apellidos" type="text" name="names">
                 </div>
                 <div class="">
                     <label for="" class="text-white">Correo</label>
                     <input class="w-full rounded-lg p-2 outline-none text-primary" placeholder="Ingrese correo"
-                        type="email">
+                        type="email" name="email">
                 </div>
                 <div class="">
                     <label for="" class="text-white">Celular</label>
                     <input class="w-full rounded-lg p-2 outline-none text-primary" placeholder="Ingrese celular"
-                        type="text">
+                        type="text" name="cellphone">
                 </div>
                 <div class="">
                     <label for="" class="text-white">Mensaje</label>
                     <textarea class="w-full rounded-lg p-2 outline-none text-primary resize-none"
-                        placeholder="Ingrese mensaje" type="text" rows="3"></textarea>
+                        placeholder="Ingrese mensaje" type="text" rows="3" name="message"></textarea>
                 </div>
                 <button
+                    type="submit"
                     class="text-primary duration-150 ease-in-out rounded-lg bg-white p-2 hover:shadow-lg hover:shadow-white/50 px-5 font-semibold">
                     Enviar
                 </button>
@@ -255,6 +260,7 @@
         <p class="text-[10px] text-white text-center">© 2023 · Miguel Carrasco Dev · Todos los derechos reservados.</p>
     </footer>
     <script src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
