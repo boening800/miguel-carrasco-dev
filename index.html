@@ -39,7 +39,13 @@
     <title>Miguel Carrasco Dev</title>
 </head>
 
-<body class="bg-gray  scroll-custom">
+<body class="bg-gray scroll-custom">
+    
+    <div class="fixed bottom-0 right-0 z-[100] p-4" id="arrow-up-bottom">
+        <button class="bg-primary text-white w-10 h-10 rounded-lg shadow-lg">
+            <i class="bi bi-arrow-up"></i>
+        </button>
+    </div>
     <nav
         class="flex flex-row sm:justify-end lg:justify-center items-center text-white py-8 text-xl fixed h-[30px] top-0 w-full  z-[40] shadow-sm">
         <ul class=" lg:gap-4 sm:hidden lg:flex">
@@ -115,7 +121,7 @@
                 Cuento con más de 5 años de experiencia desarrollando aplicaciones web a medida con tecnologías como
                 Angular y React, los diseños que he manejado son acordes al cliente con una apariencia modena y
                 amigable; además, estos sistemas web han sido desarrollados con tecnologías backend como .NET y Node JS
-                con motores de base de datos SQL y No SQL, como MySQL, SQL Server, Firebase y Mondo DB.
+                con motores de base de datos SQL y No SQL como MySQL, SQL Server, Firebase y Mongo DB.
             </p>
             <div class="flex justify-start">
                 <ul class="flex flex-col items-start text-primary">
@@ -216,7 +222,7 @@
             <div class="text-white text-center flex flex-col gap-4">
                 <div class="flex flex-col items-center text-white font-bold text-[2rem]">Contacto</div>
             </div>
-            <form class="flex flex-col gap-2" action="" method="post">
+            <form class="flex flex-col gap-2 w-[380px]" action="" method="post">
                 <div class="">
                     <label for="" class="text-white">Nombres y apellidos</label>
                     <input class="w-full rounded-lg p-2 outline-none text-primary"
@@ -248,7 +254,6 @@
     <footer class="p-10 bg-primary">
         <p class="text-[10px] text-white text-center">© 2023 · Miguel Carrasco Dev · Todos los derechos reservados.</p>
     </footer>
-
     <script src="./index.js"></script>
 </body>
 
