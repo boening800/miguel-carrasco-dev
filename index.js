@@ -1,5 +1,5 @@
 
-//OCULTAR EL MENU SUPERIOR AL HACER SCROLL
+// OCULTAR EL MENU SUPERIOR AL HACER SCROLL
 const nav = document.querySelector('nav');
 function watchMenu() {
     nav.style.top = `-${nav.clientHeight < window.scrollY ?
@@ -8,7 +8,7 @@ function watchMenu() {
 }
 window.addEventListener('scroll', watchMenu);
 
-//CONFIGURACION DE BOTON PARA SUBIR TODO EL SCROLL
+// CONFIGURACION DE BOTON PARA SUBIR TODO EL SCROLL
 document.getElementById('arrow-up-bottom').addEventListener('click',()=>{
     window.scroll(0, 0); 
 })
@@ -25,15 +25,15 @@ document.getElementById('exit-menu').addEventListener('click', () => {
     document.getElementById('sidenav').classList.add('right-[-380px]')
 });
 
-
 window.addEventListener('click',(e)=>{
+    // CERRAR MENU DESDE AFUERA Y DENTRO
     if(e.target != true){
         document.getElementById('sidenav').classList.remove('right-0')
         document.getElementById('sidenav').classList.add('right-[-380px]')
     }
 },true);
 
-//ENVIO DE FORMULARIO DE CONTACTO
+// ENVIO DE FORMULARIO DE CONTACTO
 const $form = document.querySelector('#form');
 
 $form.addEventListener('submit', handleSubmit);
