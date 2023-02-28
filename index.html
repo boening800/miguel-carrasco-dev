@@ -22,7 +22,6 @@
                 },
                 colors: {
                     'primary': '#46b578',
-                    'primary-100': '#46b578',
                     'white': '#ffffff',
                     'gray': '#3e3e3e',
                     'gray-100': '#555555'
@@ -35,37 +34,44 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
-
-    <!-- SWEETALERT 2 -->
-    
+    <!-- ANIMATION SCROLL -->
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <!-- Option 1: Include in HTML -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <title>Miguel Carrasco Dev</title>
 </head>
 
 <body class="bg-gray scroll-custom">
-    
-    <div class="fixed bottom-0 right-0 z-[100] p-4" id="arrow-up-bottom">
+    <div class="fixed left-0 text-white text-lg bottom-[50%] z-[40] duration-700 ease-in-out" id="social-options">
+        <ul class="flex flex-col gap-1">
+            <a class="rounded-r-lg bg-primary p-2 shadow-lg" href="https://www.linkedin.com/in/mcarrasco26/"
+                target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a class="rounded-r-lg bg-primary p-2 shadow-lg" href="https://github.com/boening800" target="_blank"><i
+                    class="bi bi-github"></i></a>
+        </ul>
+    </div>
+    <div class="fixed bottom-0 right-0 z-[100] p-4 duration-700 ease-in-out" id="arrow-up-bottom">
         <button class="bg-primary text-white w-10 h-10 rounded-lg shadow-lg">
             <i class="bi bi-arrow-up"></i>
         </button>
     </div>
-    <nav
-        class="flex flex-row sm:justify-end lg:justify-center items-center text-white py-8 text-xl fixed h-[30px] top-0 w-full  z-[40] shadow-sm">
-        <ul class=" lg:gap-4 sm:hidden lg:flex">
-            <li><a class="hover:text-primary duration-150 ease-in-out" href="#home">Inicio</a></li>
-            <li><a class="hover:text-primary duration-150 ease-in-out" href="#about-me">Sobre mi</a></li>
-            <li><a class="hover:text-primary duration-150 ease-in-out" href="#tecnology">Tecnologías</a></li>
+    <!-- NAV DE OPCIONES -->
+    <nav class="flex flex-row sm:justify-end lg:justify-center items-center text-white  text-xl fixed top-0 w-full z-[40] "
+        id="nav">
+        <ul class="lg:gap-4 sm:hidden lg:flex w-fit py-3 px-8 rounded-b-xl duration-700 ease-in-out">
+            <li><a class="duration-150 ease-in-out" href="#home">Inicio</a></li>
+            <li><a class="duration-150 ease-in-out" href="#about-me">Sobre mi</a></li>
+            <li><a class="duration-150 ease-in-out" href="#tecnology">Tecnologías</a></li>
             <!-- <li><a class="hover:text-primary duration-150 ease-in-out" href="#">Proyectos</a></li> -->
-            <li><a class="hover:text-primary duration-150 ease-in-out" href="#contact">Contacto</a></li>
+            <li><a class="duration-150 ease-in-out" href="#contact">Contacto</a></li>
         </ul>
         <div id="menu" class="sm:block lg:hidden cursor-pointer hover:text-primary mr-4">
             <i class="bi bi-list"></i>
         </div>
     </nav>
-
+    <!-- SIDENAV -->
     <div id="sidenav"
-        class="duration-200 ease-in-out lg:hidden sm:block fixed bg-[#eeeeee] right-[-380px] top-0 h-full w-[350px] z-[50] shadow-lg shadow-primary bg-primary">
+        class="duration-200 ease-in-out lg:hidden sm:block fixed bg-primary right-[-380px] top-0 h-full w-[350px] z-[50] shadow-lg shadow-primary bg-primary">
         <span class=" text-white w-full flex justify-end pr-4">
             <i id="exit-menu" class="bi bi-x cursor-pointer text-[25px]"></i>
         </span>
@@ -79,12 +85,15 @@
             </ul>
         </div>
     </div>
-
-    <section id="home" class="flex sm:flex-col lg:flex-row sm:justify-center items-center gap-4 sm:pt-[40px] md:pt-[86px] h-screen" style="background-image: url('./assets/background-code.jpg')">
-        <div class="sm:w-64 lg:w-[40rem] flex justify-center items-center">
+    <!-- INICIO -->
+    <section id="home"
+        class="flex sm:flex-col lg:flex-row sm:justify-center items-center gap-4 sm:pt-[40px] md:pt-[86px] h-screen"
+        style="background-image: url('./assets/background-code.jpg')">
+        <div class="sm:w-64 lg:w-[40rem] flex justify-center items-center" data-aos="fade-up" data-aos-duration="300">
             <img src="./assets/img-svg-home.svg" alt="Miguel Carrasco Dev">
         </div>
-        <div class="text-white w-full flex flex-col justify-center items-center gap-4 lg:w-[35rem]">
+        <div class="text-white w-full flex flex-col justify-center items-center gap-4 lg:w-[35rem]"
+            data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
             <div class="flex flex-col items-center text-primary font-bold sm:text-[3rem] lg:text-[6rem]">
                 <span>MIGUEL</span>
                 <span>CARRASCO</span>
@@ -94,12 +103,13 @@
             </div>
             <p class="italic">Desarrollo y diseño de sistemas web</p>
             <a href="#contact"
-                class="duration-150 ease-in-out rounded-lg bg-primary p-2 hover:shadow-lg hover:shadow-primary/50 px-5 font-semibold">Contacto</a>
+                class="duration-150 ease-in-out rounded-lg bg-primary p-2 hover:shadow-lg hover:shadow-primary/50 px-5 font-semibold">Contáctame</a>
         </div>
     </section>
-
-    <section id="about-me" class="flex sm:flex-col lg:flex-row sm:justify-center items-center sm:gap-2 gap-4 h-screen px-4 bg-gray-100" >
-        <div class="sm:w-[20rem] sm:h-[10rem] md:w-[30rem] lg:h-[30rem] flex">
+    <!-- SOBRE MI -->
+    <section id="about-me"
+        class="flex sm:flex-col lg:flex-row sm:justify-center items-center sm:gap-2 gap-4 h-screen px-4 bg-gray-100">
+        <div class="sm:w-[20rem] sm:h-[10rem] md:w-[30rem] lg:h-[30rem] flex" data-aos="fade-right">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" id="blobSvg"
                 style="opacity: 1;" filter="blur(0px)" transform="rotate(0)">
                 <image x="0" y="0" width="100%" height="100%" clip-path="url(#shape)" href="./assets/perfil.jpg"
@@ -119,10 +129,11 @@
                 </clipPath>
             </svg>
         </div>
-        <div class="text-white text-center flex flex-col gap-4 lg:w-[35rem]">
-            <div class="flex flex-col items-center text-primary font-bold text-[2rem]">Sobre mi</div>
+        <div class="text-white text-center flex flex-col gap-4 lg:w-[35rem]" data-aos="fade-left">
+            <div class="flex flex-col items-center text-primary text-[2rem]">Sobre mi</div>
             <p class="text-justify sm:text-sm lg:text-lg">
-                Cuento con más de 5 años de experiencia desarrollando aplicaciones web a medida con tecnologías como
+                Cuento con más de <b>5 años de experiencia</b> desarrollando aplicaciones web a medida con tecnologías
+                como
                 Angular y React, los diseños que he manejado son acordes al cliente con una apariencia modena y
                 amigable; además, estos sistemas web han sido desarrollados con tecnologías backend como .NET y Node JS
                 con motores de base de datos SQL y No SQL como MySQL, SQL Server, Firebase y Mongo DB.
@@ -135,87 +146,89 @@
                 </ul>
             </div>
             <div>
-                <a href="https://drive.google.com/file/d/1EyG30joxcmWn-ial7PN9rUnVhHiFsL0W/view?usp=sharing" target="_blank" class="duration-150 ease-in-out rounded-lg bg-primary p-2 hover:shadow-lg hover:shadow-primary/50 px-5 ">
+                <a href="https://drive.google.com/file/d/1EyG30joxcmWn-ial7PN9rUnVhHiFsL0W/view?usp=sharing"
+                    target="_blank"
+                    class="duration-150 ease-in-out rounded-lg bg-primary p-2 hover:shadow-lg hover:shadow-primary/50 px-5 ">
                     Ver Curriculum Vitae
                 </a>
             </div>
         </div>
     </section>
-
+    <!-- TECNOLOGIAS -->
     <section id="tecnology" class="flex sm:flex-col sm:justify-center items-center gap-4 mt-14 h-screen px-4">
-        <div class="text-white text-center flex flex-col gap-4">
+        <div class="text-white text-center flex flex-col gap-4" data-aos="fade-down">
             <div class="flex flex-col items-center text-primary font-bold text-[2rem]">Tecnologías</div>
             <p class="text-sm">
                 Estas son algunas de las tecnologías que más he usado en los proyectos.
             </p>
         </div>
         <div class="grid sm:grid-cols-3 lg:grid-cols-5 gap-3">
-            <div
-                class="bg-gray-100 rounded-lg p-3 flex flex-col justify-center items-center gap-2 w-24 h-24 lg:w-36 lg:h-36">
+            <div class="bg-gray-100 rounded-lg p-3 flex flex-col justify-center items-center gap-2 w-24 h-24 lg:w-36 lg:h-36"
+                data-aos="fade-up-right">
                 <img class="w-10 h-10 lg:h-16 lg:w-16" src="./assets/tecnology/angular.png"
                     alt="Angular Miguel Carrasco Dev">
                 <span class="text-white font-bold">Angular</span>
             </div>
-            <div
-                class="bg-gray-100 rounded-lg p-3 flex flex-col justify-center items-center gap-2 w-24 h-24 lg:w-36 lg:h-36">
+            <div class="bg-gray-100 rounded-lg p-3 flex flex-col justify-center items-center gap-2 w-24 h-24 lg:w-36 lg:h-36"
+                data-aos="fade-up-right">
                 <img class="w-10 h-10 lg:h-16 lg:w-16" src="./assets/tecnology/react.png"
                     alt="React Miguel Carrasco Dev">
                 <span class="text-white font-bold">React</span>
             </div>
-            <div
-                class="bg-gray-100 rounded-lg p-3 flex flex-col justify-center items-center gap-2 w-24 h-24 lg:w-36 lg:h-36">
+            <div class="bg-gray-100 rounded-lg p-3 flex flex-col justify-center items-center gap-2 w-24 h-24 lg:w-36 lg:h-36"
+                data-aos="fade-down">
                 <img class="w-10 h-10 lg:h-16 lg:w-16" src="./assets/tecnology/firebase.png"
                     alt="Firebase Miguel Carrasco Dev">
                 <span class="text-white font-bold">Firebase</span>
             </div>
-            <div
-                class="bg-gray-100 rounded-lg p-3 flex flex-col justify-center items-center gap-2 w-24 h-24 lg:w-36 lg:h-36">
+            <div class="bg-gray-100 rounded-lg p-3 flex flex-col justify-center items-center gap-2 w-24 h-24 lg:w-36 lg:h-36"
+                data-aos="fade-up-left">
                 <img class="w-10 h-10 lg:h-16 lg:w-16" src="./assets/tecnology/mongodb.png"
                     alt="Mongo DB Miguel Carrasco Dev">
                 <span class="text-white font-bold">Mongo DB</span>
             </div>
-            <div
-                class="bg-gray-100 rounded-lg p-3 flex flex-col justify-center items-center gap-2 w-24 h-24 lg:w-36 lg:h-36">
+            <div class="bg-gray-100 rounded-lg p-3 flex flex-col justify-center items-center gap-2 w-24 h-24 lg:w-36 lg:h-36"
+                data-aos="fade-up-left">
                 <img class="w-10 h-10 lg:h-16 lg:w-16" src="./assets/tecnology/nodejs.png"
                     alt="Node JS Miguel Carrasco Dev">
                 <span class="text-white font-bold">Node JS</span>
             </div>
-            <div
-                class="bg-gray-100 rounded-lg p-3 flex flex-col justify-center items-center gap-2 w-24 h-24 lg:w-36 lg:h-36">
+            <div class="bg-gray-100 rounded-lg p-3 flex flex-col justify-center items-center gap-2 w-24 h-24 lg:w-36 lg:h-36"
+                data-aos="fade-up-right">
                 <img class="w-10 h-10 lg:h-16 lg:w-16" src="./assets/tecnology/jest.png" alt="Jest Miguel Carrasco Dev">
                 <span class="text-white font-bold">Jest</span>
             </div>
-            <div
-                class="bg-gray-100 rounded-lg p-3 flex flex-col justify-center items-center gap-2 w-24 h-24 lg:w-36 lg:h-36">
+            <div class="bg-gray-100 rounded-lg p-3 flex flex-col justify-center items-center gap-2 w-24 h-24 lg:w-36 lg:h-36"
+                data-aos="fade-up-right">
                 <img class="w-10 h-10 lg:h-16 lg:w-16" src="./assets/tecnology/nextjs.png"
                     alt="Next JS Miguel Carrasco Dev">
                 <span class="text-white font-bold">Next JS</span>
             </div>
-            <div
-                class="bg-gray-100 rounded-lg p-3 flex flex-col justify-center items-center gap-2 w-24 h-24 lg:w-36 lg:h-36">
+            <div class="bg-gray-100 rounded-lg p-3 flex flex-col justify-center items-center gap-2 w-24 h-24 lg:w-36 lg:h-36"
+                data-aos="fade-down">
                 <img class="w-10 h-10 lg:h-16 lg:w-16" src="./assets/tecnology/javascript.png"
                     alt="JavaScript Miguel Carrasco Dev">
                 <span class="text-white font-bold">JavaScript</span>
             </div>
-            <div
-                class="bg-gray-100 rounded-lg p-3 flex flex-col justify-center items-center gap-2 w-24 h-24 lg:w-36 lg:h-36">
+            <div class="bg-gray-100 rounded-lg p-3 flex flex-col justify-center items-center gap-2 w-24 h-24 lg:w-36 lg:h-36"
+                data-aos="fade-up-left">
                 <img class="w-10 h-10 lg:h-16 lg:w-16" src="./assets/tecnology/typescript.png"
                     alt="TypeScript Miguel Carrasco Dev">
                 <span class="text-white font-bold">TypeScript</span>
             </div>
-            <div
-                class="bg-gray-100 rounded-lg p-3 flex flex-col justify-center items-center gap-2 w-24 h-24 lg:w-36 lg:h-36">
+            <div class="bg-gray-100 rounded-lg p-3 flex flex-col justify-center items-center gap-2 w-24 h-24 lg:w-36 lg:h-36"
+                data-aos="fade-up-left">
                 <img class="w-10 h-10 lg:h-16 lg:w-16" src="./assets/tecnology/html.png" alt="HTML Miguel Carrasco Dev">
                 <span class="text-white font-bold">HTML</span>
             </div>
-            <div
-                class="bg-gray-100 rounded-lg p-3 flex flex-col justify-center items-center gap-2 w-24 h-24 lg:w-36 lg:h-36">
+            <div class="bg-gray-100 rounded-lg p-3 flex flex-col justify-center items-center gap-2 w-24 h-24 lg:w-36 lg:h-36"
+                data-aos="fade-up-right">
                 <img class="w-10 h-10 lg:h-16 lg:w-16" src="./assets/tecnology/css.png" alt="CSS Miguel Carrasco Dev">
                 <span class="text-white font-bold">CSS</span>
             </div>
         </div>
     </section>
-
+    <!-- CONTACTO -->
     <section id="contact">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#46b578" fill-opacity="1"
@@ -226,7 +239,8 @@
             <div class="text-white text-center flex flex-col gap-4">
                 <div class="flex flex-col items-center text-white font-bold text-[2rem]">Contacto</div>
             </div>
-            <form id="form" class="flex flex-col gap-2 sm:w-[350px] md:w-[380px]" action="https://formspree.io/f/mjvdwpll" method="post">
+            <form id="form" class="flex flex-col gap-2 sm:w-[350px] md:w-[380px]"
+                action="https://formspree.io/f/mjvdwpll" method="post" data-aos="fade-up">
                 <div class="">
                     <label for="" class="text-white">Nombres y apellidos</label>
                     <input class="w-full rounded-lg p-2 outline-none text-primary"
@@ -247,8 +261,7 @@
                     <textarea class="w-full rounded-lg p-2 outline-none text-primary resize-none"
                         placeholder="Ingrese mensaje" type="text" rows="3" name="message"></textarea>
                 </div>
-                <button
-                    type="submit"
+                <button type="submit"
                     class="text-primary duration-150 ease-in-out rounded-lg bg-white p-2 hover:shadow-lg hover:shadow-white/50 px-5 font-semibold">
                     Enviar
                 </button>
@@ -261,6 +274,10 @@
     </footer>
     <script src="./index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <!-- <script>
+        AOS.init();
+    </script> -->
 </body>
 
 </html>
